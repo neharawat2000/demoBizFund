@@ -1,0 +1,131 @@
+:root{
+    --heading1: 2.986rem;
+    --heading2:2.488rem;
+    --heading3:2.074rem;
+    --heading4:1.728rem;
+    --heading5:1.44rem;
+    --heading6:1.2rem;
+    --parah:1rem;
+}
+.submissionChart-container{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding: 1rem;
+    background-color: #F0F5F3;
+}
+.container{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    flex-direction: row;
+}
+.second-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.total-count-container{
+    display: flex;
+    gap: 1rem;
+}
+.today-count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--parah);
+    color: #004629;
+    font-weight: 600;
+    height: 120px;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    background-color: white;
+}
+.today-count span{
+    font-size: var(--heading3);
+    color: #00A762;
+    font-weight: 700;
+}
+.sendMail{
+    color: #0A2759;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+}
+.sendMail input{
+    border: 1px solid #B9BDC7;
+    border-radius: 5px;
+    color: #0A2759;
+    font-weight: 400;
+    font-size: 13px;
+    width: 150px;
+    padding: 0.2rem 0.5rem;
+}
+.mail{
+    background-color: #00A762;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 30px;
+}
+.countOfAgent{
+    padding: 1rem 0rem 0rem 0rem;
+}
+.countOfAgent .title{
+    color: #004629;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+.agent{
+    color: #0A2759;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@keyframes progress {
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+  }
+  
+  @property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: #00A762;
+    --secondary: #D0D3D9;
+    --size: 120px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 2 / 1;
+    border-radius: 50% / 100% 100% 0 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 0.75turn at 50% 100%, var(--primary) calc(var(--percentage) * 1% / 2), var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%));
+    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
+    -webkit-mask-mode: alpha;
+  }
+  [role="progressbar"]{
+    font-size: 1.2rem;
+    color: #0A2759;
+    font-weight: 600;
+  }
