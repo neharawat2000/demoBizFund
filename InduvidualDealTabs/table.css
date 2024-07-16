@@ -1,0 +1,107 @@
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 25px;
+    margin-bottom: 20px;
+  }
+  thead{
+    color: #667085;
+    font-size: 13.92px;
+    font-weight: 500;
+    line-height: 20.35px;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    border-collapse: collapse;
+    border-bottom: 1px solid #C7C7C7;
+  }
+  th{
+    padding:10px 20px;
+  }
+  td {
+    font-size: 15px;
+    font-weight: 400;
+    color: #667085;
+    line-height: 19.5px;
+    padding: 10px;
+    border-collapse: collapse;
+    border-bottom: 1px solid #C7C7C7;
+    background-color: white;
+    padding: 15px 20px;
+    padding: 15px 0px 15px 15px;
+  }
+  .border-changes td{
+    border-collapse: collapse;
+    border-bottom: 0px;
+    border-top: 1px solid #C7C7C7;
+  }
+  td button{
+    padding: 0.2rem 0.5rem;
+    background-color: #00A762;
+    color: white;
+    border-radius: 20px;
+  }
+  td .icon{
+    font-size: 20px;
+  }
+  .tablePages{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  .tablePages button{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    font-weight: 500;
+    background-color: transparent;
+    border:1px solid #B9BDC7 ;
+    border-radius: 8px;
+    padding:0.3rem 0.5rem;
+    color: #0A2759;
+    font-size: 16px;
+  }
+.agent-container div{
+  display: inline-block;
+  background-color: #8AD7B7;
+  color: #004629;
+  font-weight: 500;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  padding: 0.4rem;
+  border-radius: 100%;
+  margin-right: 0.6rem;
+}
+
+.company{
+  color: #0A2759;
+  font-weight: 600;
+}
+
+.status-pending,
+.status-declined,
+.status-approved{
+  padding: 0.4rem 0.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: 500;
+  width: 115px;
+}
+.status-pending {
+  background-color: #FEF4E6;
+  color: #F79009;
+}
+.status-declined {
+  background-color: #FAE6E6;
+  color: #C80000;
+}
+
+.status-approved {
+  background-color: #F0F1F3;
+  color: #004629;
+}
